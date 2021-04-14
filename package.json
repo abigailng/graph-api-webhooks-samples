@@ -25,5 +25,6 @@
     "graph api"
   ],
   "license": "https://github.com/fbsamples/graph-api-webhooks-samples/blob/master/LICENSE",
-  "bugs": "https://github.com/fbsamples/graph-api-webhooks-samples/issues"
+  "bugs": "https://github.com/fbsamples/graph-api-webhooks-samples/issues",
+  "start": "node index.js"
 }
