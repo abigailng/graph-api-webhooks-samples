@@ -66,11 +66,11 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "DANG NHAP NOT LOGIN | CHI TIET | D900 vs dcom vs 900.000"){
+          if (payload == "SIM SO NOT LOGIN"){
             var request_body = {
                 "messaging_type": "RESPONSE",
     "message": {
-      "text": "Giá cước: 900.000đ/360 ngày.\nƯu đãi: Miễn phí 84GB lưu lượng Data/12 chu kỳ. Mỗi chu kỳ có 7GB data tốc độ cao sử dụng trong 30 ngày không cộng dồn, hết 7GB truy cập tốc độ thông thường.\nĐăng ký: Bấm \"Đăng ký\" / Bấm *098*0900# / Soạn tin D900 gửi 191.\nHủy: Soạn tin HUY gửi 191."
+      "text": "Để lựa chọn sim số phù hợp với nhu cầu của bạn, bạn vui lòng truy cập tại link: https://viettel.vn/di-dong/sim-so"
     },
     "recipient": {
       "id": senderId
