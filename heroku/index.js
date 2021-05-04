@@ -68,7 +68,6 @@ app.post('/webhook_fb', function(req, res) {
           console.log(payload);
           if (payload == "GOI CUOC DATA NOT LOGIN"){
             var request_body = {
-              {
                 "messaging_type": "RESPONSE",
                 "message": {
                   "attachment": {
