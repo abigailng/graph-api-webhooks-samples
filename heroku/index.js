@@ -61,6 +61,8 @@ app.post('/webhook_fb', function(req, res) {
           console.log(text); // In tin nhắn người dùng
           callSendAPI(senderId, "Tin nhắn bạn vừa gửi: " + text);
         }
+      }
+      if (message.postback){
         if (message.message.payload){
           var payload = message.message.payload;
           console.log(payload);
