@@ -61,7 +61,7 @@ app.post('/webhook_fb', function(req, res) {
           console.log(text); // In tin nhắn người dùng
           callSendAPI(senderId, "Tin nhắn bạn vừa gửi: " + text);
         }
-        if (message.message.payload == "GET STARTED"){
+        if (message.message.payload == "GOI CUOC DATA NOT LOGIN"){
           callSendAPI(senderId, "Chào bạn. Mình là trợ lý ảo Viettel. Mình có thể giúp gì cho bạn không? ");
         }
       }
