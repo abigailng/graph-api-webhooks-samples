@@ -75,54 +75,6 @@ app.post('/webhook_fb', function(req, res) {
         "payload": {
           "elements": [
             {
-              "title": "DC5",
-              "subtitle": "Giá cước: 5.000đ\\n Ưu đãi:\\n - Có 1GB trong 24h kể từ thời điểm đăng ký, hết 1GB truy cập với cước phí 9.76đ/50KB.\\n - Gói cước tự động gia hạn.\\n Đối tượng áp dụng: Thuê bao Dcom trả trước kích hoạt mới trước ngày 15/11/2018.\\n Đăng ký: Bấm \"Đăng ký\" hoặc soạn tin DC5 gửi 191.\\n Hủy gia hạn: Soạn tin HUY gửi 191 (xác nhận Y gửi 191). Hủy gói cước: Soạn HUYDATA gửi 191 (Xác nhận Y gửi 191).",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | DC5 vs dcom vs 5.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | DC5 vs dcom vs 5.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "D10",
-              "subtitle": "Giá cước: 10.000đ.\\n Ưu đãi:\\n -  Có 3GB lưu lượng tốc độ cao trong 24h kể từ thời điểm đăng ký. Hết 3GB truy cập với cước phí 9.76đ/50KB.\\n -  Gói cước tự động gia hạn.\\n Đối tượng áp dụng: Thuê bao Dcom trả trước kích hoạt mới trước ngày 15/11/2018.\\n Đăng ký: Bấm \"Đăng ký\" hoặc soạn tin D10 gửi 191.\\n Hủy gia hạn: Soạn tin HUY gửi 191 (Xác nhận Y gửi 191). Hủy dịch vụ: Soạn tin HUYDATA gửi 191(Xác nhận Y gửi 191)",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | D10 vs dcom vs 10.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | D10 vs dcom vs 10.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "DC10",
-              "subtitle": "Giá cước: 10.000đ\\n Ưu đãi:\\n - Có 50MB trong 30 ngày kể từ thời điểm đăng ký, hết 50MB  truy cập với cước phí 9.76đ/50KB\\n -  Gói cước tự động gia hạn.\\n Đăng ký: Bấm \"Đăng ký\" hoặc soạn tin DC10 gửi 191.\\n Hủy: Soạn tin HUY gửi 191.",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | DC10 vs dcom vs 10.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | DC10 vs dcom vs 10.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
               "title": "D15",
               "subtitle": "Giá cước: 15.000đ\\n Ưu đãi: 5GB trong 24h kể từ thời điểm đăng ký, hết 5GB tính cước 9.76đ/50KB.\\n Đối tượng áp dụng: Thuê bao Dcom trả trước kích hoạt mới trước ngày 15/11/2018.\\n Đăng ký: Bấm \"Đăng ký\" hoặc soạn D15 gửi 191.\\n Hủy gia hạn: Soạn HUY gửi 191 và làm theo hướng dẫn. Hủy dịch vụ: Soạn tin HUYDATA gửi 191 (Xác nhận Y gửi 191)",
               "buttons": [
@@ -278,22 +230,6 @@ app.post('/webhook_fb', function(req, res) {
                 {
                   "title": "Chi tiết",
                   "payload": "DANG NHAP NOT LOGIN | CHI TIET | DC300 vs dcom vs 300.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "D500",
-              "subtitle": "Giá cước: 500.000đ/360 ngày\\n Ưu đãi:\\n - 60GB sử dụng trong 360 ngày (5GB/30 ngày, không bảo lưu lưu lượng còn lại khi sang chu kỳ mới)\\n - Hết lưu lượng truy cập với tốc độ thông thường\\n - Gói cước gia hạn sau 360 ngày\\n Đăng ký: Bấm Đăng ký hoặc soạn D500 gửi 191 hoặc bấm gọi *098*0500#\\n Ứng trước lưu lượng: Soạn UDT gửi 191 (ứng 5GB/30 ngày trừ vào lưu lượng và thời hạn gói D500)\\n Hủy gói: Bấm Hủy hoặc soạn HUY gửi 191.",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | D500 vs dcom vs 500.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | D500 vs dcom vs 500.000",
                   "type": "postback"
                 }
               ]
