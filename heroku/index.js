@@ -73,89 +73,16 @@ app.post('/webhook_fb', function(req, res) {
       "attachment": {
         "type": "template",
         "payload": {
-          "elements": [
+          "text": "Bạn vui lòng Đăng nhập để thực hiện tính năng này",
+          "buttons": [
             {
-              "title": "DC5",
-              "subtitle": "Giá cước: 5.000đ\nƯu đãi:\n- Có 1GB trong 24h kể từ thời điểm đăng ký, hết 1GB truy cập với cước phí 9.76đ/50KB.\n- Gói cước tự động gia hạn.\nĐối tượng áp dụng: Thuê bao Dcom trả trước kích hoạt mới trước ngày 15/11/2018.\nĐăng ký: Bấm \"Đăng ký\" hoặc soạn tin DC5 gửi 191.\nHủy gia hạn: Soạn tin HUY gửi 191 (xác nhận Y gửi 191). Hủy gói cước: Soạn HUYDATA gửi 191 (Xác nhận Y gửi 191).",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | DC5 vs dcom vs 5.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | DC5 vs dcom vs 5.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "D10",
-              "subtitle": "Giá cước: 10.000đ.\nƯu đãi:\n-  Có 3GB lưu lượng tốc độ cao trong 24h kể từ thời điểm đăng ký. Hết 3GB truy cập với cước phí 9.76đ/50KB.\n-  Gói cước tự động gia hạn.\nĐối tượng áp dụng: Thuê bao Dcom trả trước kích hoạt mới trước ngày 15/11/2018.\nĐăng ký: Bấm \"Đăng ký\" hoặc soạn tin D10 gửi 191.\nHủy gia hạn: Soạn tin HUY gửi 191 (Xác nhận Y gửi 191). Hủy dịch vụ: Soạn tin HUYDATA gửi 191(Xác nhận Y gửi 191)",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | D10 vs dcom vs 10.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | D10 vs dcom vs 10.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "DC10",
-              "subtitle": "Giá cước: 10.000đ\nƯu đãi:\n- Có 50MB trong 30 ngày kể từ thời điểm đăng ký, hết 50MB  truy cập với cước phí 9.76đ/50KB\n-  Gói cước tự động gia hạn.\nĐăng ký: Bấm \"Đăng ký\" hoặc soạn tin DC10 gửi 191.\nHủy: Soạn tin HUY gửi 191.",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | DC10 vs dcom vs 10.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | DC10 vs dcom vs 10.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "D500",
-              "subtitle": "Giá cước: 500.000đ/360 ngày\nƯu đãi:\n- 60GB sử dụng trong 360 ngày (5GB/30 ngày, không bảo lưu lưu lượng còn lại khi sang chu kỳ mới)\n- Hết lưu lượng truy cập với tốc độ thông thường\n- Gói cước gia hạn sau 360 ngày\nĐăng ký: Bấm Đăng ký hoặc soạn D500 gửi 191 hoặc bấm gọi *098*0500#\nỨng trước lưu lượng: Soạn UDT gửi 191 (ứng 5GB/30 ngày trừ vào lưu lượng và thời hạn gói D500)\nHủy gói: Bấm Hủy hoặc soạn HUY gửi 191.",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | D500 vs dcom vs 500.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | D500 vs dcom vs 500.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
-              "title": "D900",
-              "subtitle": "Giá cước: 900.000đ/360 ngày.\nƯu đãi: Miễn phí 84GB lưu lượng Data/12 chu kỳ. Mỗi chu kỳ có 7GB data tốc độ cao sử dụng trong 30 ngày không cộng dồn, hết 7GB truy cập tốc độ thông thường.\nĐăng ký: Bấm \"Đăng ký\" / Bấm *098*0900# / Soạn tin D900 gửi 191.\nHủy: Soạn tin HUY gửi 191.",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | D900 vs dcom vs 900.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | D900 vs dcom vs 900.000",
-                  "type": "postback"
-                }
-              ]
+              "title": "Đăng nhập",
+              "url": "https://viettel.vn/dang-nhap",
+              "webview_height_ratio": "full",
+              "type": "web_url"
             }
           ],
-          "template_type": "generic"
+          "template_type": "button"
         }
       }
     },
