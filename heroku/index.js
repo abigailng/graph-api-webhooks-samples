@@ -59,10 +59,10 @@ app.post('/webhook_fb', function(req, res) {
         if (message.message.text) {
           var text = message.message.text;
           console.log(text); // In tin nhắn người dùng
-          sendMessage(senderId, "Tin nhắn bạn vừa gửi: " + text);
+          callSendAPI(senderId, "Tin nhắn bạn vừa gửi: " + text);
         }
         if (message.message.payload == "GET STARTED"){
-          sendMessage(senderId, "Chào bạn. Mình là trợ lý ảo Viettel. Mình có thể giúp gì cho bạn không? ");
+          callSendAPI(senderId, "Chào bạn. Mình là trợ lý ảo Viettel. Mình có thể giúp gì cho bạn không? ");
         }
       }
     }
@@ -70,14 +70,13 @@ app.post('/webhook_fb', function(req, res) {
   res.sendStatus(200);
 });
 
-// Gửi thông tin tới REST API để trả lời
-function sendMessage(senderId, message) {
+function callSendAPI(sender_psid, response) {
   // Construct the message body
   let request_body = {
     "recipient": {
-      "id": senderId
+      "id": sender_psid
     },
-    "message": message
+    "message": response
   }
 
   // Send the HTTP request to the Messenger Platform
