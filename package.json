@@ -22,8 +22,7 @@
     "node",
     "heroku",
     "express",
-    "graph api",
-    "request"
+    "graph api"
   ],
   "license": "https://github.com/fbsamples/graph-api-webhooks-samples/blob/master/LICENSE",
   "bugs": "https://github.com/fbsamples/graph-api-webhooks-samples/issues",
