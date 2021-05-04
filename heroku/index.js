@@ -68,7 +68,7 @@ app.post('/webhook_fb', function(req, res) {
           console.log(payload);
           if (payload == "DICH VU GTGT NOT LOGIN"){
             var request_body = {
-                {
+                
     "messaging_type": "RESPONSE",
     "message": {
       "attachment": {
