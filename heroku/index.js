@@ -66,11 +66,25 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "SIM SO NOT LOGIN"){
+          if (payload == "KHUYEN MAI CHO BAN NOT LOGIN"){
             var request_body = {
                 "messaging_type": "RESPONSE",
     "message": {
-      "text": "Để lựa chọn sim số phù hợp với nhu cầu của bạn, bạn vui lòng truy cập tại link: https://viettel.vn/di-dong/sim-so"
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "text": "Bạn vui lòng Đăng nhập để thực hiện tính năng này",
+          "buttons": [
+            {
+              "title": "Đăng nhập",
+              "url": "https://viettel.vn/dang-nhap",
+              "webview_height_ratio": "full",
+              "type": "web_url"
+            }
+          ],
+          "template_type": "button"
+        }
+      }
     },
     "recipient": {
       "id": senderId
