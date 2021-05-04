@@ -48,15 +48,44 @@ app.post('/webhook_fb', function(req, res) {
   console.log('request header X-Hub-Signature validated');
   // Process the Facebook updates here
   received_updates.unshift(req.body);
+  var entries = req.body.entry;
+  for (var entry of entries) {
+    var messaging = entry.messaging;
+    for (var message of messaging) {
+      var senderId = message.sender.id;
+      if (message.message) {
+        // If user send text
+        if (message.message.text) {
+          var text = message.message.text;
+          console.log(text); // In tin nhắn người dùng
+          sendMessage(senderId, "Tin nhắn bạn vừa gửi: " + text);
+        }
+        if (message.message.payload == "GET STARTED"){
+          sendMessage(senderId, "Chào bạn. Mình là trợ lý ảo Viettel. Mình có thể giúp gì cho bạn không? ");
+        }
+      }
+    }
+  }
   res.sendStatus(200);
 });
 
-app.post('/instagram', function(req, res) {
-  console.log('Instagram request body:');
-  console.log(req.body);
-  // Process the Instagram updates here
-  received_updates.unshift(req.body);
-  res.sendStatus(200);
-});
+// Gửi thông tin tới REST API để trả lời
+function sendMessage(senderId, message) {
+  request({
+    url: 'https://graph.facebook.com/v2.6/me/messages&#39;,
+    qs: {
+      access_token: "token",
+    },
+    method: 'POST',
+    json: {
+      recipient: {
+        id: senderId
+      },
+      message: {
+        text: message
+      },
+    }
+  });
+}
 
 app.listen();
