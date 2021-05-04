@@ -71,21 +71,7 @@ app.post('/webhook_fb', function(req, res) {
                 
     "messaging_type": "RESPONSE",
     "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "text": "Bạn vui lòng Đăng nhập để thực hiện tính năng này",
-          "buttons": [
-            {
-              "title": "Đăng nhập",
-              "url": "https://viettel.vn/dang-nhap",
-              "webview_height_ratio": "full",
-              "type": "web_url"
-            }
-          ],
-          "template_type": "button"
-        }
-      }
+      "text": "Xem ngay video “Cười vỡ bụng với Tuyển hàng chân dài” tại http://myclip.vn/cuoivobung Myclip sở hữu hàng triệu video đặc sắc, đa dạng thể loại hài, nhạc, phim, thể thao, thiếu nhi, làm đẹp. Người dùng có thể thoải mái xem video giải trí, tương tác, comment, download/upload video yêu thích và chia sẻ với cộng đồng    Hãy trải nghiệm chất lượng dịch vụ tốt nhất với ữu đãi Không giới hạn DATA 3G/4G 100% tốc độ cao Viettel -         Gói ngày: soạn tin DK gửi 9062 (3.000đ/ngày)  -         Gói tuần: soạn tin DK7 gửi 9062 (10.000đ/tuần) -         Gói tháng: soạn tin DK30 gửi 9062 (35.000đ/tháng)"
     },
     "recipient": {
       "id": senderId
