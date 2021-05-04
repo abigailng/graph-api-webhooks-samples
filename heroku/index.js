@@ -76,7 +76,7 @@ app.post('/webhook_fb', function(req, res) {
                       "elements": [
                         {
                           "title": "ST5K",
-                          "subtitle": "Giá cước: 5.000đ/lần đăng ký.\n Ưu đãi: + 500MB sử dụng đến 24h cùng ngày đăng ký. Gói cước gia hạn tự động. + Đặc biệt “MUA 2 TẶNG 1”, Viettel tặng thêm 500MB khi quý khách đăng ký lần tiếp theo trong ngày. Đăng ký: Bấm \"Đăng ký\" hoặc soạn ST5K gửi 191 Hủy gia hạn: Bấm hủy hoặc soạn HUY ST5K gửi 191",
+                          "subtitle": "Giá cước: 5.000đ/lần đăng ký. <br />Ưu đãi: + 500MB sử dụng đến 24h cùng ngày đăng ký. Gói cước gia hạn tự động. + Đặc biệt “MUA 2 TẶNG 1”, Viettel tặng thêm 500MB khi quý khách đăng ký lần tiếp theo trong ngày. Đăng ký: Bấm \"Đăng ký\" hoặc soạn ST5K gửi 191 Hủy gia hạn: Bấm hủy hoặc soạn HUY ST5K gửi 191",
                           "buttons": [
                             {
                               "title": "Đăng ký",
