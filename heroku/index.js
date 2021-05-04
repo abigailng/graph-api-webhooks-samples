@@ -66,7 +66,7 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "KHUYEN MAI CHO BAN NOT LOGIN"){
+          if (payload == "DICH VU GTGT NOT LOGIN"){
             var request_body = {
                 {
     "messaging_type": "RESPONSE",
