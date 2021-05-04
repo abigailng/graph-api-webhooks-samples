@@ -66,7 +66,7 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "GOI CUOC DATA NOT LOGIN"){
+          if (payload == "DANG NHAP NOT LOGIN | DC5 vs dcom vs 5.000"){
             var request_body = {
                 "messaging_type": "RESPONSE",
     "message": {
