@@ -161,7 +161,7 @@ app.post('/webhook_fb', function(req, res) {
                   }
                 },
                 "recipient": {
-                  "id": "<PSID>"
+                  "id": senderId
                 }
             }
             callSendAPI(senderId, request_body);
