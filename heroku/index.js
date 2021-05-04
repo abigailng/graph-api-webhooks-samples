@@ -63,8 +63,8 @@ app.post('/webhook_fb', function(req, res) {
         }
       }
       if (message.postback){
-        if (message.message.payload){
-          var payload = message.message.payload;
+        if (message.postback.payload){
+          var payload = message.postback.payload;
           console.log(payload);
           callSendAPI(senderId, "Chào bạn. Mình là trợ lý ảo Viettel. Mình có thể giúp gì cho bạn không? ");
         }
