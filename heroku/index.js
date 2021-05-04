@@ -68,84 +68,101 @@ app.post('/webhook_fb', function(req, res) {
           console.log(payload);
           if (payload == "GOI CUOC DATA NOT LOGIN"){
             var request_body = {
-              "messaging_type": "RESPONSE",
-              "message": {
-                "attachment": {
-                  "type": "template",
-                  "payload": {
-                    "elements": [
-                      {
-                        "title": "<b>ST5K</b><br/>",
-                        "subtitle": "<p>\r\n\t<strong>Gi&aacute; cước:</strong> 5.000đ/lần đăng k&yacute;.<br />\r\n\t<strong>Ưu đ&atilde;i:</strong><br />\r\n\t+ 500MB sử dụng đến 24h c&ugrave;ng ng&agrave;y đăng k&yacute;. G&oacute;i cước gia hạn tự động.<br />\r\n\t+ Đặc biệt &ldquo;MUA 2 TẶNG 1&rdquo;, Viettel tặng th&ecirc;m 500MB khi qu&yacute; kh&aacute;ch đăng k&yacute; lần tiếp theo trong ng&agrave;y.<br />\r\n\t<strong>Đăng k&yacute;</strong>: Bấm &quot;Đăng k&yacute;&quot; hoặc soạn ST5K gửi 191<br />\r\n\t<strong>Hủy gia hạn:</strong> Bấm hủy hoặc soạn HUY ST5K gửi 191</p>\r\n",
-                        "buttons": [
-                          {
-                            "title": "Đăng ký",
-                            "payload": "DANG NHAP NOT LOGIN | ST5K vs data_addon vs 5.000",
-                            "type": "postback"
-                          },
-                          {
-                            "title": "Chi tiết",
-                            "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST5K vs data_addon vs 5.000",
-                            "type": "postback"
-                          }
-                        ]
-                      },
-                      {
-                        "title": "<b>ST10K</b><br/>",
-                        "subtitle": "<p>\r\n\t<span style=\"font-size:16px;\"><span style=\"color: rgb(0, 0, 0);\"><span style=\"font-family: times new roman,times,serif;\"><strong>Gi&aacute; cước:</strong> 10.000đ/lần.<br />\r\n\t<strong>Ưu đ&atilde;i: </strong><br />\r\n\t+ C&oacute; 2GB sử dụng đến 24h ng&agrave;y đăng k&yacute;<br />\r\n\t+ Hết 2GB t&iacute;nh cước theo g&oacute;i Mobile Internet đang sử dụng (nếu c&oacute;)<br />\r\n\t<strong>Đăng k&yacute;: </strong>Nhấn n&uacute;t Đăng k&yacute; hoặc soạn ST10K gửi 191, hoặc bấm gọi *098*16#<br />\r\n\t<strong>Hủy gia hạn:</strong> Soạn HUY ST10K gửi 191. <strong>Hủy g&oacute;i:</strong> HUYDATA ST10K gửi 191.</span></span></span></p>\r\n",
-                        "buttons": [
-                          {
-                            "title": "Đăng ký",
-                            "payload": "DANG NHAP NOT LOGIN | ST10K vs data_addon vs 10.000",
-                            "type": "postback"
-                          },
-                          {
-                            "title": "Chi tiết",
-                            "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST10K vs data_addon vs 10.000",
-                            "type": "postback"
-                          }
-                        ]
-                      },
-                      {
-                        "title": "<b>ST15K</b><br/>",
-                        "subtitle": "<p>\r\n\t<span style=\"font-size:16px;\"><span style=\"font-family: times new roman,times,serif;\"><strong>Gi&aacute; cước:</strong> 15.000đ/3 ng&agrave;y.<br />\r\n\t<strong>Ưu đ&atilde;i:</strong><br />\r\n\t- C&oacute; ngay 3GB lưu lượng tốc độ cao sử dụng trong 3 ng&agrave;y kể từ ng&agrave;y đăng k&yacute; th&agrave;nh c&ocirc;ng. Hết lưu lượng truy cập theo g&oacute;i Mobile Internet đang sử dụng (nếu c&oacute;).<br />\r\n\t- G&oacute;i cước gia hạn khi hết chu kỳ, lưu lượng c&ograve;n lại sẽ được bảo lưu khi gia hạn th&agrave;nh c&ocirc;ng.<br />\r\n\t<strong>Đăng k&yacute;</strong>: Bấm Đăng k&yacute; hoặc soạn ST15K gửi 191, bấm gọi *098*3# hoặc *098*1533#<br />\r\n\t<strong>Hủy gia hạn:</strong> Soạn HUY ST15K gửi 191</span></span></p>\r\n",
-                        "buttons": [
-                          {
-                            "title": "Đăng ký",
-                            "payload": "DANG NHAP NOT LOGIN | ST15K vs data_addon vs 15.000",
-                            "type": "postback"
-                          },
-                          {
-                            "title": "Chi tiết",
-                            "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST15K vs data_addon vs 15.000",
-                            "type": "postback"
-                          }
-                        ]
-                      },
-                      {
-                        "title": "<b>ST30K</b><br/>",
-                        "subtitle": "<p>\r\n\t<strong>Gi&aacute; cước:</strong> 30.000đ/7 ng&agrave;y<br />\r\n\t<strong>Ưu đ&atilde;i:</strong><br />\r\n\t-&nbsp; C&oacute; ngay 7GB lưu lượng tốc độ cao sử dụng trong 7 ng&agrave;y kể từ ng&agrave;y đăng k&yacute; th&agrave;nh c&ocirc;ng. Hết lưu lượng truy cập theo g&oacute;i Mobile Internet đang sử dụng (nếu c&oacute;).<br />\r\n\t- G&oacute;i cước gia hạn khi hết chu kỳ, lưu lượng c&ograve;n lại sẽ được bảo lưu khi gia hạn th&agrave;nh c&ocirc;ng.<br />\r\n\t<strong>Đăng k&yacute;:</strong> Bấm Đăng k&yacute;, soạn ST30K gửi 191, bấm gọi *098*7#hoặc *098*3077#<br />\r\n\t<strong>Hủy gia hạn: </strong>Soạn HUY ST30K gửi 191</p>\r\n",
-                        "buttons": [
-                          {
-                            "title": "Đăng ký",
-                            "payload": "DANG NHAP NOT LOGIN | ST30K vs data_addon vs 30.000",
-                            "type": "postback"
-                          },
-                          {
-                            "title": "Chi tiết",
-                            "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST30K vs data_addon vs 30.000",
-                            "type": "postback"
-                          }
-                        ]
-                      }
-                    ],
-                    "template_type": "generic"
+              {
+                "messaging_type": "RESPONSE",
+                "message": {
+                  "attachment": {
+                    "type": "template",
+                    "payload": {
+                      "elements": [
+                        {
+                          "title": "ST5K",
+                          "subtitle": "Giá cước: 5.000đ/lần đăng ký. Ưu đãi: + 500MB sử dụng đến 24h cùng ngày đăng ký. Gói cước gia hạn tự động. + Đặc biệt “MUA 2 TẶNG 1”, Viettel tặng thêm 500MB khi quý khách đăng ký lần tiếp theo trong ngày. Đăng ký: Bấm \"Đăng ký\" hoặc soạn ST5K gửi 191 Hủy gia hạn: Bấm hủy hoặc soạn HUY ST5K gửi 191",
+                          "buttons": [
+                            {
+                              "title": "Đăng ký",
+                              "payload": "DANG NHAP NOT LOGIN | ST5K vs data_addon vs 5.000",
+                              "type": "postback"
+                            },
+                            {
+                              "title": "Chi tiết",
+                              "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST5K vs data_addon vs 5.000",
+                              "type": "postback"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "ST10K",
+                          "subtitle": "Giá cước: 10.000đ/lần. Ưu đãi: + Có 2GB sử dụng đến 24h ngày đăng ký + Hết 2GB tính cước theo gói Mobile Internet đang sử dụng (nếu có) Đăng ký: Nhấn nút Đăng ký hoặc soạn ST10K gửi 191, hoặc bấm gọi *098*16# Hủy gia hạn: Soạn HUY ST10K gửi 191. Hủy gói: HUYDATA ST10K gửi 191.",
+                          "buttons": [
+                            {
+                              "title": "Đăng ký",
+                              "payload": "DANG NHAP NOT LOGIN | ST10K vs data_addon vs 10.000",
+                              "type": "postback"
+                            },
+                            {
+                              "title": "Chi tiết",
+                              "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST10K vs data_addon vs 10.000",
+                              "type": "postback"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "ST15K",
+                          "subtitle": "Giá cước: 15.000đ/3 ngày. Ưu đãi: - Có ngay 3GB lưu lượng tốc độ cao sử dụng trong 3 ngày kể từ ngày đăng ký thành công. Hết lưu lượng truy cập theo gói Mobile Internet đang sử dụng (nếu có). - Gói cước gia hạn khi hết chu kỳ, lưu lượng còn lại sẽ được bảo lưu khi gia hạn thành công. Đăng ký: Bấm Đăng ký hoặc soạn ST15K gửi 191, bấm gọi *098*3# hoặc *098*1533# Hủy gia hạn: Soạn HUY ST15K gửi 191",
+                          "buttons": [
+                            {
+                              "title": "Đăng ký",
+                              "payload": "DANG NHAP NOT LOGIN | ST15K vs data_addon vs 15.000",
+                              "type": "postback"
+                            },
+                            {
+                              "title": "Chi tiết",
+                              "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST15K vs data_addon vs 15.000",
+                              "type": "postback"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "ST30K",
+                          "subtitle": "Giá cước: 30.000đ/7 ngày Ưu đãi: -  Có ngay 7GB lưu lượng tốc độ cao sử dụng trong 7 ngày kể từ ngày đăng ký thành công. Hết lưu lượng truy cập theo gói Mobile Internet đang sử dụng (nếu có). - Gói cước gia hạn khi hết chu kỳ, lưu lượng còn lại sẽ được bảo lưu khi gia hạn thành công. Đăng ký: Bấm Đăng ký, soạn ST30K gửi 191, bấm gọi *098*7#hoặc *098*3077# Hủy gia hạn: Soạn HUY ST30K gửi 191",
+                          "buttons": [
+                            {
+                              "title": "Đăng ký",
+                              "payload": "DANG NHAP NOT LOGIN | ST30K vs data_addon vs 30.000",
+                              "type": "postback"
+                            },
+                            {
+                              "title": "Chi tiết",
+                              "payload": "DANG NHAP NOT LOGIN | CHI TIET | ST30K vs data_addon vs 30.000",
+                              "type": "postback"
+                            }
+                          ]
+                        },
+                        {
+                          "title": "CR999",
+                          "subtitle": "CR999: 999.000đ/3GB/50SMS/50p nhận cuộc gọi và gọi đi (không gồm hướng gọi quốc tế, vệ tinh). Sử dụng trong 10 ngày tại 20 quốc gia/ vùng lãnh thổ. Hết lưu lượng ngừng sử dụng. Hết 10 ngày tính cước thông thường.Đăng kí: Bấm Đăng ký hoặc Soạn CR999 gửi 191, bấm gọi *098#;Hủy: Soạn HUY CR999 gửi 191",
+                          "buttons": [
+                            {
+                              "title": "Đăng ký",
+                              "payload": "DANG NHAP NOT LOGIN | CR999 vs data_addon vs 999.000",
+                              "type": "postback"
+                            },
+                            {
+                              "title": "Chi tiết",
+                              "payload": "DANG NHAP NOT LOGIN | CHI TIET | CR999 vs data_addon vs 999.000",
+                              "type": "postback"
+                            }
+                          ]
+                        }
+                      ],
+                      "template_type": "generic"
+                    }
                   }
+                },
+                "recipient": {
+                  "id": "<PSID>"
                 }
-              },
-              "recipient": {
-                "id": senderId
-              }
             }
             callSendAPI(senderId, request_body);
           }
