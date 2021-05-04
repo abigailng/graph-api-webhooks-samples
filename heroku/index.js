@@ -72,7 +72,7 @@ app.post('/webhook_fb', function(req, res) {
 // Gửi thông tin tới REST API để trả lời
 function sendMessage(senderId, message) {
   request({
-    url: 'https://graph.facebook.com/v2.6/me/messages&#39;,
+    url: 'https://graph.facebook.com/v2.6/me/messages',
     qs: {
       access_token: "token",
     },
