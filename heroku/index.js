@@ -53,6 +53,7 @@ app.post('/webhook_fb', function(req, res) {
     var messaging = entry.messaging;
     for (var message of messaging) {
       var senderId = message.sender.id;
+      console.log(senderId);
       if (message.message) {
         // If user send text
         if (message.message.text) {
