@@ -85,7 +85,7 @@ function callSendAPI(sender_psid, response) {
     "qs": { "access_token": process.env.PAGE_ACCESS_TOKEN },
     "method": "POST",
     "json": request_body
-  }
+  
   }); 
 }
 
