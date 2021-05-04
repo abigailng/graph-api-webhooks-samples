@@ -75,22 +75,6 @@ app.post('/webhook_fb', function(req, res) {
         "payload": {
           "elements": [
             {
-              "title": "D15",
-              "subtitle": "Giá cước: 15.000đ\\n Ưu đãi: 5GB trong 24h kể từ thời điểm đăng ký, hết 5GB tính cước 9.76đ/50KB.\\n Đối tượng áp dụng: Thuê bao Dcom trả trước kích hoạt mới trước ngày 15/11/2018.\\n Đăng ký: Bấm \"Đăng ký\" hoặc soạn D15 gửi 191.\\n Hủy gia hạn: Soạn HUY gửi 191 và làm theo hướng dẫn. Hủy dịch vụ: Soạn tin HUYDATA gửi 191 (Xác nhận Y gửi 191)",
-              "buttons": [
-                {
-                  "title": "Đăng ký",
-                  "payload": "DANG NHAP NOT LOGIN | D15 vs dcom vs 15.000",
-                  "type": "postback"
-                },
-                {
-                  "title": "Chi tiết",
-                  "payload": "DANG NHAP NOT LOGIN | CHI TIET | D15 vs dcom vs 15.000",
-                  "type": "postback"
-                }
-              ]
-            },
-            {
               "title": "D30",
               "subtitle": "Giá cước: 30.000đ/30 ngày. Ưu đãi: -  Miễn phí 2.5GB lưu lượng Data/30 ngày. Hết 2.5GB truy cập tính giá 9,76đ/50KB. -  Gói cước được gia hạn sau 30 ngày. Đăng ký: Bấm \"Đăng ký\" / Soạn tin D30 gửi 191 / Bấm *098*830# Hủy gia hạn: Soạn tin HUY gửi 191 (xác nhận Y gửi 191) Hủy gói cước: Soạn HUYDATA gửi 191 (xác nhận Y gửi 191)",
               "buttons": [
