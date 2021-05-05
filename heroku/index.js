@@ -71,7 +71,74 @@ app.post('/webhook_fb', function(req, res) {
                 
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Xem ngay video “Cười vỡ bụng với Tuyển hàng chân dài” tại http://myclip.vn/cuoivobung Myclip sở hữu hàng triệu video đặc sắc, đa dạng thể loại hài, nhạc, phim, thể thao, thiếu nhi, làm đẹp. Người dùng có thể thoải mái xem video giải trí, tương tác, comment, download/upload video yêu thích và chia sẻ với cộng đồng    Hãy trải nghiệm chất lượng dịch vụ tốt nhất với ữu đãi Không giới hạn DATA 3G/4G 100% tốc độ cao Viettel -         Gói ngày: soạn tin DK gửi 9062 (3.000đ/ngày)  -         Gói tuần: soạn tin DK7 gửi 9062 (10.000đ/tuần) -         Gói tháng: soạn tin DK30 gửi 9062 (35.000đ/tháng)"
+      "text": "",
+      "quick_replies": [
+        {
+          "title": "An Giang",
+          "payload": "DICH VU CO DINH | TINH A076 vs An Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "Bà Rịa Vũng Tàu",
+          "payload": "DICH VU CO DINH | TINH V064 vs Bà Rịa Vũng Tàu",
+          "content_type": "text"
+        },
+        {
+          "title": "Bắc Giang",
+          "payload": "DICH VU CO DINH | TINH B240 vs Bắc Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "Bắc Kạn",
+          "payload": "DICH VU CO DINH | TINH B281 vs Bắc Kạn",
+          "content_type": "text"
+        },
+        {
+          "title": "Bạc Liêu",
+          "payload": "DICH VU CO DINH | TINH B781 vs Bạc Liêu",
+          "content_type": "text"
+        },
+        {
+          "title": "Bắc Ninh",
+          "payload": "DICH VU CO DINH | TINH B241 vs Bắc Ninh",
+          "content_type": "text"
+        },
+        {
+          "title": "Bến Tre",
+          "payload": "DICH VU CO DINH | TINH B075 vs Bến Tre",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Dương",
+          "payload": "DICH VU CO DINH | TINH B650 vs Bình Dương",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Phước",
+          "payload": "DICH VU CO DINH | TINH B651 vs Bình Phước",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Thuận",
+          "payload": "DICH VU CO DINH | TINH B062 vs Bình Thuận",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Định",
+          "payload": "DICH VU CO DINH | TINH B056 vs Bình Định",
+          "content_type": "text"
+        },
+        {
+          "title": "Cà Mau",
+          "payload": "DICH VU CO DINH | TINH C780 vs Cà Mau",
+          "content_type": "text"
+        },
+        {
+          "title": "Cần Thơ",
+          "payload": "DICH VU CO DINH | TINH C710 vs Cần Thơ",
+          "content_type": "text"
+        }
+      ]
     },
     "recipient": {
       "id": senderId
