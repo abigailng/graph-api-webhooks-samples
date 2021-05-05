@@ -71,7 +71,7 @@ app.post('/webhook_fb', function(req, res) {
                 
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "",
+      "text": " ",
       "quick_replies": [
         {
           "title": "An Giang",
