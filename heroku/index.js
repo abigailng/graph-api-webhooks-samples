@@ -71,71 +71,71 @@ app.post('/webhook_fb', function(req, res) {
                 
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Tỉnh/TP",
+      "text": "Quận/Huyện",
       "quick_replies": [
         {
-          "title": "Quảng Nam",
-          "payload": "DICH VU CO DINH | TINH Q510 vs Quảng Nam",
+          "title": "Bắc Trà My",
+          "payload": "DICH VU CO DINH | HUYEN Q510018 vs Quảng Nam vs Bắc Trà My",
           "content_type": "text"
         },
         {
-          "title": "Quảng Ngãi",
-          "payload": "DICH VU CO DINH | TINH Q055 vs Quảng Ngãi",
+          "title": "Duy Xuyên",
+          "payload": "DICH VU CO DINH | HUYEN Q510006 vs Quảng Nam vs Duy Xuyên",
           "content_type": "text"
         },
         {
-          "title": "Quảng Ninh",
-          "payload": "DICH VU CO DINH | TINH Q033 vs Quảng Ninh",
+          "title": "Hiệp Đức",
+          "payload": "DICH VU CO DINH | HUYEN Q510010 vs Quảng Nam vs Hiệp Đức",
           "content_type": "text"
         },
         {
-          "title": "Quảng Trị",
-          "payload": "DICH VU CO DINH | TINH Q053 vs Quảng Trị",
+          "title": "Hội An",
+          "payload": "DICH VU CO DINH | HUYEN Q510002 vs Quảng Nam vs Hội An",
           "content_type": "text"
         },
         {
-          "title": "Sóc Trăng",
-          "payload": "DICH VU CO DINH | TINH S079 vs Sóc Trăng",
+          "title": "Nam Giang",
+          "payload": "DICH VU CO DINH | HUYEN Q510007 vs Quảng Nam vs Nam Giang",
           "content_type": "text"
         },
         {
-          "title": "Sơn La",
-          "payload": "DICH VU CO DINH | TINH S022 vs Sơn La",
+          "title": "Nam Trà My",
+          "payload": "DICH VU CO DINH | HUYEN Q510013 vs Quảng Nam vs Nam Trà My",
           "content_type": "text"
         },
         {
-          "title": "Tây Ninh",
-          "payload": "DICH VU CO DINH | TINH T066 vs Tây Ninh",
+          "title": "Nông Sơn",
+          "payload": "DICH VU CO DINH | HUYEN Q510019 vs Quảng Nam vs Nông Sơn",
           "content_type": "text"
         },
         {
-          "title": "Thái Bình",
-          "payload": "DICH VU CO DINH | TINH T036 vs Thái Bình",
+          "title": "Núi Thành",
+          "payload": "DICH VU CO DINH | HUYEN Q510012 vs Quảng Nam vs Núi Thành",
           "content_type": "text"
         },
         {
-          "title": "Thái Nguyên",
-          "payload": "DICH VU CO DINH | TINH T280 vs Thái Nguyên",
+          "title": "Phú Ninh",
+          "payload": "DICH VU CO DINH | HUYEN Q510015 vs Quảng Nam vs Phú Ninh",
           "content_type": "text"
         },
         {
-          "title": "Thanh Hóa",
-          "payload": "DICH VU CO DINH | TINH T037 vs Thanh Hóa",
+          "title": "Phước Sơn",
+          "payload": "DICH VU CO DINH | HUYEN Q510014 vs Quảng Nam vs Phước Sơn",
           "content_type": "text"
         },
         {
-          "title": "Thừa Thiên Huế",
-          "payload": "DICH VU CO DINH | TINH T054 vs Thừa Thiên Huế",
+          "title": "Quế Sơn",
+          "payload": "DICH VU CO DINH | HUYEN Q510009 vs Quảng Nam vs Quế Sơn",
           "content_type": "text"
         },
         {
-          "title": "Tiền Giang",
-          "payload": "DICH VU CO DINH | TINH T073 vs Tiền Giang",
+          "title": "Tam Kỳ",
+          "payload": "DICH VU CO DINH | HUYEN Q510001 vs Quảng Nam vs Tam Kỳ",
           "content_type": "text"
         },
         {
-          "title": "TPHCM",
-          "payload": "DICH VU CO DINH | TINH T008 vs TPHCM",
+          "title": "Tây Giang",
+          "payload": "DICH VU CO DINH | HUYEN Q510017 vs Quảng Nam vs Tây Giang",
           "content_type": "text"
         }
       ]
