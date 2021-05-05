@@ -145,10 +145,34 @@ app.post('/webhook_fb', function(req, res) {
           }
         }
         // If user send text
-        if (message.message.text) {
+        if (message.message.text == "0362635500") {
           var text = message.message.text;
           console.log(text); // In tin nhắn người dùng
-          callSendAPI(senderId, "Tin nhắn bạn vừa gửi: " + text);
+          "messaging_type": "RESPONSE",
+    "message": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "text": "Bạn xác nhận đăng ký dịch vụ Internet với gói cước NET2PLUS, tại khu vực Tr Hy, Tây Giang, Quảng Nam, số điện thoại liên hệ 0362635500",
+          "buttons": [
+            {
+              "title": "Đồng ý",
+              "payload": "DICH VU CO DINH | YES Internet vs Q510017002 vs NET2PLUS vs 300000 vs 362635500 vs INTERNET vs Tr Hy, Tây Giang, Quảng Nam",
+              "type": "postback"
+            },
+            {
+              "title": "Không",
+              "payload": "DICH VU CO DINH | NO",
+              "type": "postback"
+            }
+          ],
+          "template_type": "button"
+        }
+      }
+    },
+          
+          callSendAPI(senderId, request_body);
+          
         }
       }
       if (message.postback){
@@ -179,7 +203,6 @@ app.post('/webhook_fb', function(req, res) {
         }
       }
     },
-    "recipien
     "recipient": {
       "id": senderId
     }
