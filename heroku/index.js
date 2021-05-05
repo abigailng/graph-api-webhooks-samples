@@ -155,11 +155,11 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "DICH VU CO DINH | CHI TIET | Internet vs Q510017010 vs NET1PLUS vs 250000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam"){
+          if (payload == "DICH VU CO DINH | TAO YEU CAU | Internet vs Q510017010 vs NET4PLUS vs 400000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam"){
             var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Giá: 250.000 đồng/tháng. Phù hợp với cá nhân, hộ gia đình khu vực nông thôn (ngoại thành) có nhu cầu sử dụng 1 - 5 thiết bị (PC, laptop, smartphone, máy tính bảng) cho mục đích học tập, giải trí thông thường, xem tin tức thông thường"
+      "text": "Bạn vui lòng nhập số điện thoại liên hệ:"
     },
     "recipient": {
       "id": senderId
