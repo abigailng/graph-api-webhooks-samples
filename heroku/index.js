@@ -148,7 +148,8 @@ app.post('/webhook_fb', function(req, res) {
         if (message.message.text == "0362635500") {
           var text = message.message.text;
           console.log(text); // In tin nhắn người dùng
-          "messaging_type": "RESPONSE",
+          var request_body = {
+            "messaging_type": "RESPONSE",
     "message": {
       "attachment": {
         "type": "template",
@@ -170,6 +171,11 @@ app.post('/webhook_fb', function(req, res) {
         }
       }
     },
+            "recipient": {
+      "id": senderId
+    }
+          }
+          
           
           callSendAPI(senderId, request_body);
           
