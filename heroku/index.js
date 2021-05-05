@@ -58,63 +58,82 @@ app.post('/webhook_fb', function(req, res) {
         if (message.message.quick_reply){
           var payload = message.message.quick_reply.payload;
           console.log(payload);
-          if (payload == "DICH VU CO DINH | HUYEN Q510017 vs Quảng Nam vs Tây Giang"){
+          if (payload == "DICH VU CO DINH | XA Q510017010 vs A Nông, Tây Giang, Quảng Nam"){
             var request_body = {
               "messaging_type": "RESPONSE",
     "message": {
-      "text": "Phường/Xã",
-      "quick_replies": [
-        {
-          "title": "A Nông",
-          "payload": "DICH VU CO DINH | XA Q510017010 vs A Nông, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "A Tiêng",
-          "payload": "DICH VU CO DINH | XA Q510017006 vs A Tiêng, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "A Vương",
-          "payload": "DICH VU CO DINH | XA Q510017004 vs A Vương, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "A Xan",
-          "payload": "DICH VU CO DINH | XA Q510017007 vs A Xan, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "Bhallê",
-          "payload": "DICH VU CO DINH | XA Q510017003 vs Bhallê, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "Ch Ơm",
-          "payload": "DICH VU CO DINH | XA Q510017008 vs Ch Ơm, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "Dang",
-          "payload": "DICH VU CO DINH | XA Q510017005 vs Dang, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "G Ry",
-          "payload": "DICH VU CO DINH | XA Q510017009 vs G Ry, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "Lăng",
-          "payload": "DICH VU CO DINH | XA Q510017001 vs Lăng, Tây Giang, Quảng Nam",
-          "content_type": "text"
-        },
-        {
-          "title": "Tr Hy",
-          "payload": "DICH VU CO DINH | XA Q510017002 vs Tr Hy, Tây Giang, Quảng Nam",
-          "content_type": "text"
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "elements": [
+            {
+              "title": "NET4PLUS",
+              "subtitle": "Giá: 400.000 đồng/tháng Phù hợp với cá nhân, hộ gia đình khá giả, nhu cầu cao về CNTT – download/upload nhiều, nhu cầu xem film HD, GameOnline, IP Camera, smartTV. Số lượng thiết bị sử dụng đồng thời từ 10 - 20 thiết bị.",
+              "buttons": [
+                {
+                  "title": "Đăng ký NET4PLUS",
+                  "payload": "DICH VU CO DINH | TAO YEU CAU | Internet vs Q510017010 vs NET4PLUS vs 400000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                },
+                {
+                  "title": "Chi tiết",
+                  "payload": "DICH VU CO DINH | CHI TIET | Internet vs Q510017010 vs NET4PLUS vs 400000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                }
+              ]
+            },
+            {
+              "title": "NET3PLUS",
+              "subtitle": "Giá: 350.000 đồng/tháng Phù hợp với cá nhân, hộ gia đình khá giả, nhu cầu cao về CNTT – download/upload nhiều, nhu cầu xem film HD, GameOnline, IP Camera. Số lượng thiết bị sử dụng đồng thời từ 5 - 10 thiết bị",
+              "buttons": [
+                {
+                  "title": "Đăng ký NET3PLUS",
+                  "payload": "DICH VU CO DINH | TAO YEU CAU | Internet vs Q510017010 vs NET3PLUS vs 350000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                },
+                {
+                  "title": "Chi tiết",
+                  "payload": "DICH VU CO DINH | CHI TIET | Internet vs Q510017010 vs NET3PLUS vs 350000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                }
+              ]
+            },
+            {
+              "title": "NET1PLUS",
+              "subtitle": "Giá: 250.000 đồng/tháng Phù hợp với cá nhân, hộ gia đình khu vực nông thôn (ngoại thành) có nhu cầu sử dụng 1 - 5 thiết bị (PC, laptop, smartphone, máy tính bảng) cho mục đích học tập, giải trí thông thường, xem tin tức thông thường",
+              "buttons": [
+                {
+                  "title": "Đăng ký NET1PLUS",
+                  "payload": "DICH VU CO DINH | TAO YEU CAU | Internet vs Q510017010 vs NET1PLUS vs 250000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                },
+                {
+                  "title": "Chi tiết",
+                  "payload": "DICH VU CO DINH | CHI TIET | Internet vs Q510017010 vs NET1PLUS vs 250000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                }
+              ]
+            },
+            {
+              "title": "NET2PLUS",
+              "subtitle": "Giá: 300.000 đồng/tháng Phù hợp với cá nhân, hộ gia đình khu vực thành thị có nhu cầu sử dụng 1 - 5 thiết bị (PC, laptop, smartphone, máy tính bảng) cho mục đích học tập, giải trí thông thường, xem tin tức thông thường",
+              "buttons": [
+                {
+                  "title": "Đăng ký NET2PLUS",
+                  "payload": "DICH VU CO DINH | TAO YEU CAU | Internet vs Q510017010 vs NET2PLUS vs 300000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                },
+                {
+                  "title": "Chi tiết",
+                  "payload": "DICH VU CO DINH | CHI TIET | Internet vs Q510017010 vs NET2PLUS vs 300000 vs INTERNET vs A Nông, Tây Giang, Quảng Nam",
+                  "type": "postback"
+                }
+              ]
+            }
+          ],
+          "template_type": "generic"
         }
-      ]
+      }
     },
                 "recipient": {
                 "id": senderId
