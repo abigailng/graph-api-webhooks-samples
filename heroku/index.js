@@ -55,16 +55,8 @@ app.post('/webhook_fb', function(req, res) {
       var senderId = message.sender.id;
       console.log(senderId);
       if (message.message) {
-        // If user send text
-        if (message.message.text) {
-          var text = message.message.text;
-          console.log(text); // In tin nhắn người dùng
-          callSendAPI(senderId, "Tin nhắn bạn vừa gửi: " + text);
-        }
-      }
-      if (message.postback){
-        if (message.postback.payload){
-          var payload = message.postback.payload;
+        if (message.quick_reply){
+          var payload = message.quick_reply.payload;
           console.log(payload);
           if (payload == "DICH VU CO DINH | TINH Q510 vs Quảng Nam"){
             var request_body = {
@@ -136,6 +128,96 @@ app.post('/webhook_fb', function(req, res) {
         {
           "title": "Tây Giang",
           "payload": "DICH VU CO DINH | HUYEN Q510017 vs Quảng Nam vs Tây Giang",
+          "content_type": "text"
+        }
+      ]
+    },
+    "recipient": {
+      "id": senderId
+    }
+          }
+        }
+        // If user send text
+        if (message.message.text) {
+          var text = message.message.text;
+          console.log(text); // In tin nhắn người dùng
+          callSendAPI(senderId, "Tin nhắn bạn vừa gửi: " + text);
+        }
+      }
+      if (message.postback){
+        if (message.postback.payload){
+          var payload = message.postback.payload;
+          console.log(payload);
+          if (payload == "DICH VU CO DINH NOT LOGIN"){
+            var request_body = {
+                
+  "messaging_type": "RESPONSE",
+    "message": {
+      "text": "Tỉnh/TP",
+      "quick_replies": [
+        {
+          "title": "Quảng Nam",
+          "payload": "DICH VU CO DINH | TINH Q510 vs Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Quảng Ngãi",
+          "payload": "DICH VU CO DINH | TINH Q055 vs Quảng Ngãi",
+          "content_type": "text"
+        },
+        {
+          "title": "Quảng Ninh",
+          "payload": "DICH VU CO DINH | TINH Q033 vs Quảng Ninh",
+          "content_type": "text"
+        },
+        {
+          "title": "Quảng Trị",
+          "payload": "DICH VU CO DINH | TINH Q053 vs Quảng Trị",
+          "content_type": "text"
+        },
+        {
+          "title": "Sóc Trăng",
+          "payload": "DICH VU CO DINH | TINH S079 vs Sóc Trăng",
+          "content_type": "text"
+        },
+        {
+          "title": "Sơn La",
+          "payload": "DICH VU CO DINH | TINH S022 vs Sơn La",
+          "content_type": "text"
+        },
+        {
+          "title": "Tây Ninh",
+          "payload": "DICH VU CO DINH | TINH T066 vs Tây Ninh",
+          "content_type": "text"
+        },
+        {
+          "title": "Thái Bình",
+          "payload": "DICH VU CO DINH | TINH T036 vs Thái Bình",
+          "content_type": "text"
+        },
+        {
+          "title": "Thái Nguyên",
+          "payload": "DICH VU CO DINH | TINH T280 vs Thái Nguyên",
+          "content_type": "text"
+        },
+        {
+          "title": "Thanh Hóa",
+          "payload": "DICH VU CO DINH | TINH T037 vs Thanh Hóa",
+          "content_type": "text"
+        },
+        {
+          "title": "Thừa Thiên Huế",
+          "payload": "DICH VU CO DINH | TINH T054 vs Thừa Thiên Huế",
+          "content_type": "text"
+        },
+        {
+          "title": "Tiền Giang",
+          "payload": "DICH VU CO DINH | TINH T073 vs Tiền Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "TPHCM",
+          "payload": "DICH VU CO DINH | TINH T008 vs TPHCM",
           "content_type": "text"
         }
       ]
