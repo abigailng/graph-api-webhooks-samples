@@ -66,7 +66,7 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "DANG NHAP NOT LOGIN GTGT | CHI TIET | MYCLIP_GOINGAY"){
+          if (payload == "DICH VU CO DINH NOT LOGIN"){
             var request_body = {
                 
     "messaging_type": "RESPONSE",
