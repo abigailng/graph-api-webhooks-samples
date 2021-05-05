@@ -71,71 +71,71 @@ app.post('/webhook_fb', function(req, res) {
                 
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Chọn tỉnh",
+      "text": "Tỉnh/TP",
       "quick_replies": [
         {
-          "title": "An Giang",
-          "payload": "DICH VU CO DINH | TINH A076 vs An Giang",
+          "title": "Quảng Nam",
+          "payload": "DICH VU CO DINH | TINH Q510 vs Quảng Nam",
           "content_type": "text"
         },
         {
-          "title": "Bà Rịa Vũng Tàu",
-          "payload": "DICH VU CO DINH | TINH V064 vs Bà Rịa Vũng Tàu",
+          "title": "Quảng Ngãi",
+          "payload": "DICH VU CO DINH | TINH Q055 vs Quảng Ngãi",
           "content_type": "text"
         },
         {
-          "title": "Bắc Giang",
-          "payload": "DICH VU CO DINH | TINH B240 vs Bắc Giang",
+          "title": "Quảng Ninh",
+          "payload": "DICH VU CO DINH | TINH Q033 vs Quảng Ninh",
           "content_type": "text"
         },
         {
-          "title": "Bắc Kạn",
-          "payload": "DICH VU CO DINH | TINH B281 vs Bắc Kạn",
+          "title": "Quảng Trị",
+          "payload": "DICH VU CO DINH | TINH Q053 vs Quảng Trị",
           "content_type": "text"
         },
         {
-          "title": "Bạc Liêu",
-          "payload": "DICH VU CO DINH | TINH B781 vs Bạc Liêu",
+          "title": "Sóc Trăng",
+          "payload": "DICH VU CO DINH | TINH S079 vs Sóc Trăng",
           "content_type": "text"
         },
         {
-          "title": "Bắc Ninh",
-          "payload": "DICH VU CO DINH | TINH B241 vs Bắc Ninh",
+          "title": "Sơn La",
+          "payload": "DICH VU CO DINH | TINH S022 vs Sơn La",
           "content_type": "text"
         },
         {
-          "title": "Bến Tre",
-          "payload": "DICH VU CO DINH | TINH B075 vs Bến Tre",
+          "title": "Tây Ninh",
+          "payload": "DICH VU CO DINH | TINH T066 vs Tây Ninh",
           "content_type": "text"
         },
         {
-          "title": "Bình Dương",
-          "payload": "DICH VU CO DINH | TINH B650 vs Bình Dương",
+          "title": "Thái Bình",
+          "payload": "DICH VU CO DINH | TINH T036 vs Thái Bình",
           "content_type": "text"
         },
         {
-          "title": "Bình Phước",
-          "payload": "DICH VU CO DINH | TINH B651 vs Bình Phước",
+          "title": "Thái Nguyên",
+          "payload": "DICH VU CO DINH | TINH T280 vs Thái Nguyên",
           "content_type": "text"
         },
         {
-          "title": "Bình Thuận",
-          "payload": "DICH VU CO DINH | TINH B062 vs Bình Thuận",
+          "title": "Thanh Hóa",
+          "payload": "DICH VU CO DINH | TINH T037 vs Thanh Hóa",
           "content_type": "text"
         },
         {
-          "title": "Bình Định",
-          "payload": "DICH VU CO DINH | TINH B056 vs Bình Định",
+          "title": "Thừa Thiên Huế",
+          "payload": "DICH VU CO DINH | TINH T054 vs Thừa Thiên Huế",
           "content_type": "text"
         },
         {
-          "title": "Cà Mau",
-          "payload": "DICH VU CO DINH | TINH C780 vs Cà Mau",
+          "title": "Tiền Giang",
+          "payload": "DICH VU CO DINH | TINH T073 vs Tiền Giang",
           "content_type": "text"
         },
         {
-          "title": "Cần Thơ",
-          "payload": "DICH VU CO DINH | TINH C710 vs Cần Thơ",
+          "title": "TPHCM",
+          "payload": "DICH VU CO DINH | TINH T008 vs TPHCM",
           "content_type": "text"
         }
       ]
