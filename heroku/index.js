@@ -185,11 +185,34 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "DICH VU CO DINH | NO"){
+          if (payload == "BAO LOI | SONG | 2g"){
             var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Cảm ơn bạn đã quan tâm tới dịch vụ của Viettel. Chúc bạn một ngày vui vẻ!"
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "text": "Bạn vui lòng mô tả tình trạng lỗi:",
+          "buttons": [
+            {
+              "title": "Mất sóng",
+              "payload": "BAO LOI | SONG | 2g vs Mất sóng",
+              "type": "postback"
+            },
+            {
+              "title": "Sóng yếu/Chập chờn",
+              "payload": "BAO LOI | SONG | 2g vs Sóng yếu/Chập chờn",
+              "type": "postback"
+            },
+            {
+              "title": "Tốc độ truy cập chậm",
+              "payload": "BAO LOI | SONG | 2g vs Tốc độ truy cập chậm",
+              "type": "postback"
+            }
+          ],
+          "template_type": "button"
+        }
+      }
     },
     "recipient": {
       "id": senderId
