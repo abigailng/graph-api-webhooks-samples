@@ -58,79 +58,64 @@ app.post('/webhook_fb', function(req, res) {
         if (message.message.quick_reply){
           var payload = message.message.quick_reply.payload;
           console.log(payload);
-          if (payload == "DICH VU CO DINH | TINH Q510 vs Quảng Nam"){
+          if (payload == "DICH VU CO DINH | HUYEN Q510017 vs Quảng Nam vs Tây Giang"){
             var request_body = {
               "messaging_type": "RESPONSE",
-              "message": {
-                "text": "Quận/Huyện",
-                "quick_replies": [
-                  {
-                    "title": "Bắc Trà My",
-                    "payload": "DICH VU CO DINH | HUYEN Q510018 vs Quảng Nam vs Bắc Trà My",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Duy Xuyên",
-                    "payload": "DICH VU CO DINH | HUYEN Q510006 vs Quảng Nam vs Duy Xuyên",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Hiệp Đức",
-                    "payload": "DICH VU CO DINH | HUYEN Q510010 vs Quảng Nam vs Hiệp Đức",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Hội An",
-                    "payload": "DICH VU CO DINH | HUYEN Q510002 vs Quảng Nam vs Hội An",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Nam Giang",
-                    "payload": "DICH VU CO DINH | HUYEN Q510007 vs Quảng Nam vs Nam Giang",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Nam Trà My",
-                    "payload": "DICH VU CO DINH | HUYEN Q510013 vs Quảng Nam vs Nam Trà My",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Nông Sơn",
-                    "payload": "DICH VU CO DINH | HUYEN Q510019 vs Quảng Nam vs Nông Sơn",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Núi Thành",
-                    "payload": "DICH VU CO DINH | HUYEN Q510012 vs Quảng Nam vs Núi Thành",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Phú Ninh",
-                    "payload": "DICH VU CO DINH | HUYEN Q510015 vs Quảng Nam vs Phú Ninh",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Phước Sơn",
-                    "payload": "DICH VU CO DINH | HUYEN Q510014 vs Quảng Nam vs Phước Sơn",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Quế Sơn",
-                    "payload": "DICH VU CO DINH | HUYEN Q510009 vs Quảng Nam vs Quế Sơn",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Tam Kỳ",
-                    "payload": "DICH VU CO DINH | HUYEN Q510001 vs Quảng Nam vs Tam Kỳ",
-                    "content_type": "text"
-                  },
-                  {
-                    "title": "Tây Giang",
-                    "payload": "DICH VU CO DINH | HUYEN Q510017 vs Quảng Nam vs Tây Giang",
-                    "content_type": "text"
-                  }
-                ]
-              },
+    "message": {
+      "text": "Phường/Xã",
+      "quick_replies": [
+        {
+          "title": "A Nông",
+          "payload": "DICH VU CO DINH | XA Q510017010 vs A Nông, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "A Tiêng",
+          "payload": "DICH VU CO DINH | XA Q510017006 vs A Tiêng, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "A Vương",
+          "payload": "DICH VU CO DINH | XA Q510017004 vs A Vương, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "A Xan",
+          "payload": "DICH VU CO DINH | XA Q510017007 vs A Xan, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Bhallê",
+          "payload": "DICH VU CO DINH | XA Q510017003 vs Bhallê, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Ch Ơm",
+          "payload": "DICH VU CO DINH | XA Q510017008 vs Ch Ơm, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Dang",
+          "payload": "DICH VU CO DINH | XA Q510017005 vs Dang, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "G Ry",
+          "payload": "DICH VU CO DINH | XA Q510017009 vs G Ry, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Lăng",
+          "payload": "DICH VU CO DINH | XA Q510017001 vs Lăng, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Tr Hy",
+          "payload": "DICH VU CO DINH | XA Q510017002 vs Tr Hy, Tây Giang, Quảng Nam",
+          "content_type": "text"
+        }
+      ]
+    },
                 "recipient": {
                 "id": senderId
               }
