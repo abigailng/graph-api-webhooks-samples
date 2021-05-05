@@ -159,7 +159,7 @@ app.post('/webhook_fb', function(req, res) {
             var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Giá: 250.000 đồng/tháng Phù hợp với cá nhân, hộ gia đình khu vực nông thôn (ngoại thành) có nhu cầu sử dụng 1 - 5 thiết bị (PC, laptop, smartphone, máy tính bảng) cho mục đích học tập, giải trí thông thường, xem tin tức thông thường"
+      "text": "Giá: 250.000 đồng/tháng. Phù hợp với cá nhân, hộ gia đình khu vực nông thôn (ngoại thành) có nhu cầu sử dụng 1 - 5 thiết bị (PC, laptop, smartphone, máy tính bảng) cho mục đích học tập, giải trí thông thường, xem tin tức thông thường"
     },
     "recipient": {
       "id": senderId
