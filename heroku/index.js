@@ -185,29 +185,11 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "0362635500"){
+          if (payload == "DICH VU CO DINH | NO"){
             var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "text": "Bạn xác nhận đăng ký dịch vụ Internet với gói cước NET2PLUS, tại khu vực Tr Hy, Tây Giang, Quảng Nam, số điện thoại liên hệ 0362635500",
-          "buttons": [
-            {
-              "title": "Đồng ý",
-              "payload": "DICH VU CO DINH | YES Internet vs Q510017002 vs NET2PLUS vs 300000 vs 362635500 vs INTERNET vs Tr Hy, Tây Giang, Quảng Nam",
-              "type": "postback"
-            },
-            {
-              "title": "Không",
-              "payload": "DICH VU CO DINH | NO",
-              "type": "postback"
-            }
-          ],
-          "template_type": "button"
-        }
-      }
+      "text": "Cảm ơn bạn đã quan tâm tới dịch vụ của Viettel. Chúc bạn một ngày vui vẻ!"
     },
     "recipient": {
       "id": senderId
