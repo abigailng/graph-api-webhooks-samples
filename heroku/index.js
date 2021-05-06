@@ -195,18 +195,18 @@ app.post('/webhook_fb', function(req, res) {
           "text": "Bạn vui lòng chọn nhóm lỗi:",
           "buttons": [
             {
-              "title": "Chất lượng sóng",
-              "payload": "BAO LOI | SONG",
+              "title": "Lỗi gửi tin nhắn",
+              "payload": "BAO LOI | SMS",
               "type": "postback"
             },
             {
-              "title": "Lỗi mobile internet",
-              "payload": "BAO LOI | MOBILE INTERNET",
+              "title": "Lỗi nạp tiền",
+              "payload": "BAO LOI | NAP TIEN",
               "type": "postback"
             },
             {
-              "title": "Lỗi cuộc gọi",
-              "payload": "BAO LOI | CALLING",
+              "title": "Lỗi khuyến mại",
+              "payload": "BAO LOI | KM DA DANG KY",
               "type": "postback"
             }
           ],
