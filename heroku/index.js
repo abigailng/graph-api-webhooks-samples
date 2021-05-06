@@ -185,7 +185,7 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "BAO LOI | SONG | 2g"){
+          if (payload == "BAO LOI NOT LOGIN"){
             var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
