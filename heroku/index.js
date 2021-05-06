@@ -192,21 +192,46 @@ app.post('/webhook_fb', function(req, res) {
       "attachment": {
         "type": "template",
         "payload": {
-          "text": "Bạn vui lòng mô tả tình trạng lỗi:",
+          "text": "Bạn vui lòng chọn nhóm lỗi:",
           "buttons": [
             {
-              "title": "Mất sóng",
-              "payload": "BAO LOI | SONG | 2g vs Mất sóng",
+              "title": "Chất lượng sóng",
+              "payload": "BAO LOI | SONG",
               "type": "postback"
             },
             {
-              "title": "Sóng yếu/Chập chờn",
-              "payload": "BAO LOI | SONG | 2g vs Sóng yếu/Chập chờn",
+              "title": "Lỗi mobile internet",
+              "payload": "BAO LOI | MOBILE INTERNET",
               "type": "postback"
             },
             {
-              "title": "Tốc độ truy cập chậm",
-              "payload": "BAO LOI | SONG | 2g vs Tốc độ truy cập chậm",
+              "title": "Lỗi cuộc gọi",
+              "payload": "BAO LOI | CALLING",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi gửi tin nhắn",
+              "payload": "BAO LOI | SMS",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi nạp tiền",
+              "payload": "BAO LOI | NAP TIEN",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi khuyến mại",
+              "payload": "BAO LOI | KM DA DANG KY",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi dịch vụ GTGT",
+              "payload": "BAO LOI | DICH VU GTGT DA DANG KY",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi khác",
+              "payload": "BAO LOI | KHAC",
               "type": "postback"
             }
           ],
