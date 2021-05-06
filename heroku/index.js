@@ -208,31 +208,6 @@ app.post('/webhook_fb', function(req, res) {
               "title": "Lỗi cuộc gọi",
               "payload": "BAO LOI | CALLING",
               "type": "postback"
-            },
-            {
-              "title": "Lỗi gửi tin nhắn",
-              "payload": "BAO LOI | SMS",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi nạp tiền",
-              "payload": "BAO LOI | NAP TIEN",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi khuyến mại",
-              "payload": "BAO LOI | KM DA DANG KY",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi dịch vụ GTGT",
-              "payload": "BAO LOI | DICH VU GTGT DA DANG KY",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi khác",
-              "payload": "BAO LOI | KHAC",
-              "type": "postback"
             }
           ],
           "template_type": "button"
