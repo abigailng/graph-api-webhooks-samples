@@ -253,9 +253,9 @@ app.post('/webhook_fb', function(req, res) {
       "id": senderId
     }
             }
-            callSendAPI(senderId, request_body);
+            callSendAPI(senderId, request_body_2);
             
-            var request_body = {
+            var request_body_3 = {
     "messaging_type": "RESPONSE",
     "message": {
       "attachment": {
@@ -282,7 +282,7 @@ app.post('/webhook_fb', function(req, res) {
       "id": senderId
     }
             }
-            callSendAPI(senderId, request_body);
+            callSendAPI(senderId, request_body_3);
             
             
             
