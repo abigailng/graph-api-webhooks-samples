@@ -193,7 +193,7 @@ app.post('/webhook_fb', function(req, res) {
       "attachment": {
         "type": "template",
         "payload": {
-          "text": "--",
+          "text": "Bạn vui lòng chọn nhóm lỗi:",
           "buttons": [
             {
               "title": "Chất lượng sóng",
@@ -227,7 +227,7 @@ app.post('/webhook_fb', function(req, res) {
       "attachment": {
         "type": "template",
         "payload": {
-          "text": "--",
+          "text": "Bạn vui lòng chọn nhóm lỗi:",
           "buttons": [
             {
               "title": "Lỗi gửi tin nhắn",
@@ -261,7 +261,7 @@ app.post('/webhook_fb', function(req, res) {
       "attachment": {
         "type": "template",
         "payload": {
-          "text": "--",
+          "text": "Bạn vui lòng chọn nhóm lỗi:",
           "buttons": [
             {
               "title": "Lỗi dịch vụ GTGT",
