@@ -190,30 +190,49 @@ app.post('/webhook_fb', function(req, res) {
               var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "text": "Bạn vui lòng chọn nhóm lỗi:",
-          "buttons": [
-            {
-              "title": "Chất lượng sóng",
-              "payload": "BAO LOI | SONG",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi mobile internet",
-              "payload": "BAO LOI | MOBILE INTERNET",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi cuộc gọi",
-              "payload": "BAO LOI | CALLING",
-              "type": "postback"
-            }
-          ],
-          "template_type": "button"
+      "text": "Bạn vui lòng chọn nhóm lỗi:",
+      "quick_replies": [
+        {
+          "title": "Chất lượng sóng",
+          "payload": "BAO LOI | SONG",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi mobile internet",
+          "payload": "BAO LOI | MOBILE INTERNET",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi cuộc gọi",
+          "payload": "BAO LOI | CALLING",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi gửi tin nhắn",
+          "payload": "BAO LOI | SMS",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi nạp tiền",
+          "payload": "BAO LOI | NAP TIEN",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi khuyến mại",
+          "payload": "BAO LOI | KM DA DANG KY",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi dịch vụ GTGT",
+          "payload": "BAO LOI | DICH VU GTGT DA DANG KY",
+          "content_type": "text"
+        },
+        {
+          "title": "Lỗi khác",
+          "payload": "BAO LOI | KHAC",
+          "content_type": "text"
         }
-      }
+      ]
     },
     "recipient": {
       "id": senderId
@@ -221,68 +240,6 @@ app.post('/webhook_fb', function(req, res) {
             }
             callSendAPI(senderId, request_body);
             
-            var request_body_2 = {
-    "messaging_type": "RESPONSE",
-    "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "text": "Bạn vui lòng chọn nhóm lỗi:",
-          "buttons": [
-            {
-              "title": "Lỗi gửi tin nhắn",
-              "payload": "BAO LOI | SMS",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi nạp tiền",
-              "payload": "BAO LOI | NAP TIEN",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi khuyến mại",
-              "payload": "BAO LOI | KM DA DANG KY",
-              "type": "postback"
-            }
-          ],
-          "template_type": "button"
-        }
-      }
-    },
-    "recipient": {
-      "id": senderId
-    }
-            }
-            callSendAPI(senderId, request_body_2);
-            
-            var request_body_3 = {
-    "messaging_type": "RESPONSE",
-    "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "text": "Bạn vui lòng chọn nhóm lỗi:",
-          "buttons": [
-            {
-              "title": "Lỗi dịch vụ GTGT",
-              "payload": "BAO LOI | DICH VU GTGT DA DANG KY",
-              "type": "postback"
-            },
-            {
-              "title": "Lỗi khác",
-              "payload": "BAO LOI | KHAC",
-              "type": "postback"
-            }
-          ],
-          "template_type": "button"
-        }
-      }
-    },
-    "recipient": {
-      "id": senderId
-    }
-            }
-            callSendAPI(senderId, request_body_3);
             
             
             
