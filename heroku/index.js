@@ -186,53 +186,25 @@ app.post('/webhook_fb', function(req, res) {
         if (message.postback.payload){
           var payload = message.postback.payload;
           console.log(payload);
-          if (payload == "BAO LOI NOT LOGIN"){
+          if (payload == "KHUYEN MAI CHO BAN NOT LOGIN"){
               var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "text": "Bạn vui lòng chọn nhóm lỗi:",
-      "quick_replies": [
-        {
-          "title": "Chất lượng sóng",
-          "payload": "BAO LOI | SONG",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi mobile internet",
-          "payload": "BAO LOI | MOBILE INTERNET",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi cuộc gọi",
-          "payload": "BAO LOI | CALLING",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi gửi tin nhắn",
-          "payload": "BAO LOI | SMS",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi nạp tiền",
-          "payload": "BAO LOI | NAP TIEN",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi khuyến mại",
-          "payload": "BAO LOI | KM DA DANG KY",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi dịch vụ GTGT",
-          "payload": "BAO LOI | DICH VU GTGT DA DANG KY",
-          "content_type": "text"
-        },
-        {
-          "title": "Lỗi khác",
-          "payload": "BAO LOI | KHAC",
-          "content_type": "text"
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "text": "Bạn vui lòng Đăng nhập để thực hiện tính năng này",
+          "buttons": [
+            {
+              "title": "Đăng nhập",
+              "url": "https://viettel.vn/dang-nhap",
+              "webview_height_ratio": "full",
+              "type": "web_url"
+            }
+          ],
+          "template_type": "button"
         }
-      ]
+      }
     },
     "recipient": {
       "id": senderId
