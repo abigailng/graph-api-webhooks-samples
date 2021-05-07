@@ -187,14 +187,47 @@ app.post('/webhook_fb', function(req, res) {
           var payload = message.postback.payload;
           console.log(payload);
           if (payload == "BAO LOI NOT LOGIN"){
-            for (var i=0; i<=3;i++){
               var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
       "attachment": {
         "type": "template",
         "payload": {
-          "text": "Bạn vui lòng chọn nhóm lỗi:",
+          "text": "--",
+          "buttons": [
+            {
+              "title": "Chất lượng sóng",
+              "payload": "BAO LOI | SONG",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi mobile internet",
+              "payload": "BAO LOI | MOBILE INTERNET",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi cuộc gọi",
+              "payload": "BAO LOI | CALLING",
+              "type": "postback"
+            }
+          ],
+          "template_type": "button"
+        }
+      }
+    },
+    "recipient": {
+      "id": senderId
+    }
+            }
+            callSendAPI(senderId, request_body);
+            
+            var request_body_2 = {
+    "messaging_type": "RESPONSE",
+    "message": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "text": "--",
           "buttons": [
             {
               "title": "Lỗi gửi tin nhắn",
@@ -222,7 +255,36 @@ app.post('/webhook_fb', function(req, res) {
             }
             callSendAPI(senderId, request_body);
             
+            var request_body = {
+    "messaging_type": "RESPONSE",
+    "message": {
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "text": "--",
+          "buttons": [
+            {
+              "title": "Lỗi dịch vụ GTGT",
+              "payload": "BAO LOI | DICH VU GTGT DA DANG KY",
+              "type": "postback"
+            },
+            {
+              "title": "Lỗi khác",
+              "payload": "BAO LOI | KHAC",
+              "type": "postback"
             }
+          ],
+          "template_type": "button"
+        }
+      }
+    },
+    "recipient": {
+      "id": senderId
+    }
+            }
+            callSendAPI(senderId, request_body);
+            
+            
             
           }
 //           
