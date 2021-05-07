@@ -190,27 +190,237 @@ app.post('/webhook_fb', function(req, res) {
               var request_body = {
     "messaging_type": "RESPONSE",
     "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "text": "Bạn vui lòng Đăng nhập để thực hiện tính năng này",
-          "buttons": [
-            {
-              "title": "Đăng nhập",
-              "url": "https://viettel.vn/dang-nhap",
-              "webview_height_ratio": "full",
-              "type": "web_url"
-            }
-          ],
-          "template_type": "button"
+      "text": "Tỉnh/TP",
+      "quick_replies": [
+        {
+          "title": "An Giang",
+          "payload": "DICH VU CO DINH | TINH A076 vs An Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "Bà Rịa Vũng Tàu",
+          "payload": "DICH VU CO DINH | TINH V064 vs Bà Rịa Vũng Tàu",
+          "content_type": "text"
+        },
+        {
+          "title": "Bắc Giang",
+          "payload": "DICH VU CO DINH | TINH B240 vs Bắc Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "Bắc Kạn",
+          "payload": "DICH VU CO DINH | TINH B281 vs Bắc Kạn",
+          "content_type": "text"
+        },
+        {
+          "title": "Bạc Liêu",
+          "payload": "DICH VU CO DINH | TINH B781 vs Bạc Liêu",
+          "content_type": "text"
+        },
+        {
+          "title": "Bắc Ninh",
+          "payload": "DICH VU CO DINH | TINH B241 vs Bắc Ninh",
+          "content_type": "text"
+        },
+        {
+          "title": "Bến Tre",
+          "payload": "DICH VU CO DINH | TINH B075 vs Bến Tre",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Dương",
+          "payload": "DICH VU CO DINH | TINH B650 vs Bình Dương",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Phước",
+          "payload": "DICH VU CO DINH | TINH B651 vs Bình Phước",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Thuận",
+          "payload": "DICH VU CO DINH | TINH B062 vs Bình Thuận",
+          "content_type": "text"
+        },
+        {
+          "title": "Bình Định",
+          "payload": "DICH VU CO DINH | TINH B056 vs Bình Định",
+          "content_type": "text"
+        },
+        {
+          "title": "Cà Mau",
+          "payload": "DICH VU CO DINH | TINH C780 vs Cà Mau",
+          "content_type": "text"
+        },
+        {
+          "title": "Cần Thơ",
+          "payload": "DICH VU CO DINH | TINH C710 vs Cần Thơ",
+          "content_type": "text"
         }
-      }
+      ]
     },
     "recipient": {
       "id": senderId
     }
             }
             callSendAPI(senderId, request_body);
+            
+            var request_body_2 = {
+    "messaging_type": "RESPONSE",
+    "message": {
+      "text": "Tỉnh/TP",
+      "quick_replies": [
+        {
+          "title": "Cao Bằng",
+          "payload": "DICH VU CO DINH | TINH C026 vs Cao Bằng",
+          "content_type": "text"
+        },
+        {
+          "title": "Gia Lai",
+          "payload": "DICH VU CO DINH | TINH G059 vs Gia Lai",
+          "content_type": "text"
+        },
+        {
+          "title": "Hà Giang",
+          "payload": "DICH VU CO DINH | TINH H019 vs Hà Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "Hà Nam",
+          "payload": "DICH VU CO DINH | TINH N351 vs Hà Nam",
+          "content_type": "text"
+        },
+        {
+          "title": "Hà Nội",
+          "payload": "DICH VU CO DINH | TINH H004 vs Hà Nội",
+          "content_type": "text"
+        },
+        {
+          "title": "Hà Tĩnh",
+          "payload": "DICH VU CO DINH | TINH H039 vs Hà Tĩnh",
+          "content_type": "text"
+        },
+        {
+          "title": "Hải Dương",
+          "payload": "DICH VU CO DINH | TINH H320 vs Hải Dương",
+          "content_type": "text"
+        },
+        {
+          "title": "Hải Phòng",
+          "payload": "DICH VU CO DINH | TINH H031 vs Hải Phòng",
+          "content_type": "text"
+        },
+        {
+          "title": "Hậu Giang",
+          "payload": "DICH VU CO DINH | TINH H711 vs Hậu Giang",
+          "content_type": "text"
+        },
+        {
+          "title": "Hòa Bình",
+          "payload": "DICH VU CO DINH | TINH H018 vs Hòa Bình",
+          "content_type": "text"
+        },
+        {
+          "title": "Hưng Yên",
+          "payload": "DICH VU CO DINH | TINH H321 vs Hưng Yên",
+          "content_type": "text"
+        },
+        {
+          "title": "Khánh Hòa",
+          "payload": "DICH VU CO DINH | TINH K058 vs Khánh Hòa",
+          "content_type": "text"
+        },
+        {
+          "title": "Kiên Giang",
+          "payload": "DICH VU CO DINH | TINH K077 vs Kiên Giang",
+          "content_type": "text"
+        }
+      ]
+    },
+    "recipient": {
+      "id": senderId
+    }
+            }
+            callSendAPI(senderId, request_body_2);
+            
+            var request_body_3 = {
+    "messaging_type": "RESPONSE",
+    "message": {
+      "text": "Tỉnh/TP",
+      "quick_replies": [
+        {
+          "title": "Kon Tum",
+          "payload": "DICH VU CO DINH | TINH K060 vs Kon Tum",
+          "content_type": "text"
+        },
+        {
+          "title": "Lai Châu",
+          "payload": "DICH VU CO DINH | TINH L231 vs Lai Châu",
+          "content_type": "text"
+        },
+        {
+          "title": "Lâm Đồng",
+          "payload": "DICH VU CO DINH | TINH L063 vs Lâm Đồng",
+          "content_type": "text"
+        },
+        {
+          "title": "Lạng Sơn",
+          "payload": "DICH VU CO DINH | TINH L025 vs Lạng Sơn",
+          "content_type": "text"
+        },
+        {
+          "title": "Lào Cai",
+          "payload": "DICH VU CO DINH | TINH L020 vs Lào Cai",
+          "content_type": "text"
+        },
+        {
+          "title": "Long An",
+          "payload": "DICH VU CO DINH | TINH L072 vs Long An",
+          "content_type": "text"
+        },
+        {
+          "title": "Nam Định",
+          "payload": "DICH VU CO DINH | TINH N350 vs Nam Định",
+          "content_type": "text"
+        },
+        {
+          "title": "Nghệ An",
+          "payload": "DICH VU CO DINH | TINH N038 vs Nghệ An",
+          "content_type": "text"
+        },
+        {
+          "title": "Ninh Bình",
+          "payload": "DICH VU CO DINH | TINH N030 vs Ninh Bình",
+          "content_type": "text"
+        },
+        {
+          "title": "Ninh Thuận",
+          "payload": "DICH VU CO DINH | TINH N068 vs Ninh Thuận",
+          "content_type": "text"
+        },
+        {
+          "title": "Phú Thọ",
+          "payload": "DICH VU CO DINH | TINH P210 vs Phú Thọ",
+          "content_type": "text"
+        },
+        {
+          "title": "Phú Yên",
+          "payload": "DICH VU CO DINH | TINH P057 vs Phú Yên",
+          "content_type": "text"
+        },
+        {
+          "title": "Quảng Bình",
+          "payload": "DICH VU CO DINH | TINH Q052 vs Quảng Bình",
+          "content_type": "text"
+        }
+      ]
+    },
+    "recipient": {
+      "id": senderId
+    }
+            }
+            callSendAPI(senderId, request_body_3);
+            
             
             
             
